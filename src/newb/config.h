@@ -1,6 +1,20 @@
 #ifndef NL_CONFIG_H
 #define NL_CONFIG_H
 
+/* Sky clouds (Bicubic style, painted on the sky dome) */
+#define NL_SKY_CLOUDS                     // [toggle] nubes procedurales en el cielo
+#define NL_SKY_CLOUDS_NOISE_TEX           // [toggle] ruido desde textura (1 lectura) en vez de matemáticas
+#define NL_SKY_CLOUDS_NOISE_CELLS 16.0    // celdas voronoi de la textura (NO cambiar sin regenerarla)
+#define NL_SKY_CLOUDS_LAYERS 10           // capas = volumen y costo (4 ~ 12). Móvil: 5
+#define NL_SKY_CLOUDS_LOD_Y 0.06          // menos octavas cerca del horizonte (0.04 fiel ~ 0.08 rápido)
+#define NL_SKY_CLOUDS_SCALE 0.7           // más alto = nubes más chicas
+#define NL_SKY_CLOUDS_DENSITY 1.8         // más alto = MENOS nubes (1.2 muchas ~ 2.4 pocas)
+#define NL_SKY_CLOUDS_SPEED 1.0           // velocidad del viento
+#define NL_SKY_CLOUDS_LAYER_SQUEEZE 0.045 // separación entre capas (volumen)
+#define NL_SKY_CLOUDS_AMBIENT_MIX 0.2     // cuánto se oscurecen las capas de abajo (0.0 ~ 1.0)
+#define NL_SKY_CLOUDS_BRIGHTNESS 1.5      // brillo del lado iluminado
+#define NL_SKY_CLOUDS_HORIZON_FADE 0.5    // las nubes se desvanecen hasta esta altura
+
 /*
   NEWB SHADER MAIN CONFIG
   This part contains base configuration options for the shader.
